@@ -31,7 +31,7 @@ function crazySum(c, d) {
   } else if (c !== d) {
     return (c + d)
   }
-}
+};
 console.log(crazySum(c,d))
 
 
@@ -41,16 +41,16 @@ Write a function "crazyDiff" that computes the absolute difference between a giv
 It should return triple their absolute difference if the given number is greater than 19.
 */
 
-const a = 19
-const b = 9
-function crazyDiff(a, b) {
-    if (b > a) {
-        return b - a * 3
-    } else if (a > b) {
-        return (a - b)
+const m = 19
+const k = 9
+function crazyDiff(m, k) {
+    if (k > m) {
+        return k - m * 3
+    } else if (m > k) {
+        return (m - k)
     }
-}
-console.log(crazyDiff(a,b))
+};
+console.log(crazyDiff(m,k))
 
 
 /* EXERCISE 4
@@ -63,7 +63,7 @@ function boundary(n) {
     } else {
         return false
     }
-}
+};
 console.log(boundary(n))
 
 /* EXERCISE 5
@@ -98,12 +98,12 @@ console.log(check3and7(30))
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
 */
 
-
 function reverseString(string) {
-var splitString = string.split("")
+/*var splitString = string.split("")
 var reverseArray = splitString.reverse()
 var joinArray = reverseArray.join("")
-return joinArray
+return joinArray */
+return string.split('').reverse().join("")
 };
 console.log(reverseString("Strive"))
 
@@ -111,27 +111,34 @@ console.log(reverseString("Strive"))
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
 */
 
-const str = ("only capitalized first letters")
-const arr = str.split("")
-for(var i = 0; i<arr.lenght;i++)
-{
-arr[i]= arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+function upperFirst(myString) {
+const splitString = myString.split(" ")
+const myCapitalizedArray = []
+for(let i = 0; i < splitString.length; i++) {
+myCapitalizedArray.push(splitString[i].charAt(0).toUpperCase() + splitString[i].slice(1));
 }
-const str2 = arr.join("")
-console.log(str2)
+return myCapitalizedArray.join(" ")
+};
+console.log(upperFirst("only capitalize first letters"))
+
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
 
-let str = 'Strive'
-console.log(str.slice 0, 6))
+function cutString(anotherString) {
+    let splitString = anotherString.split("")
+splitString.shift()
+splitString.pop()
+return splitString.join("")
+};
+console.log(cutString("Homework"))
 
 /* EXERCISE 10
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
 
-function giveMeRandom(n)
+// function giveMeRandom(n)
 
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit in Eduflow.
